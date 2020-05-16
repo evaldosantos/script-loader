@@ -2,9 +2,10 @@
   "name": "script-loader",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node ./src/index.js",
+    "test": "mocha --require mocha-snapshots --require @babel/register ./src/**/*.spec.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,13 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.6"
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "jsdom": "^16.2.2",
+    "mocha": "^7.1.2",
+    "mocha-snapshots": "^4.2.0"
   }
 }

@@ -2,15 +2,17 @@
   "name": "script-loader",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "babel-node ./src/index.js",
+    "build": "babel src --out-dir lib --ignore **/*.spec.js",
     "test": "mocha --require mocha-snapshots --require @babel/register ./src/**/*.spec.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@babel/plugin-transform-runtime": "^7.9.6",
